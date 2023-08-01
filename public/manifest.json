@@ -2,7 +2,7 @@
   "short_name": "Portfolio",
   "name": "Portfolio",
   "theme_color": "#1c1c1c",
-  "background_color": "#ffffff",
+  "background_color": "#1c1c1c",
   "start_url": ".",
   "display": "standalone",
   "orientation": "portrait",

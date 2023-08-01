@@ -8,11 +8,10 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-  display: flex;
   position: fixed;
   width: 100%;
   height: 60px;
-
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 40px;
@@ -20,10 +19,19 @@ export const Header = styled.div`
   magin: auto;
 
   background-color: ${theme.colors.white};
-
   button {
     background-color: ${theme.colors.white};
   }
+`;
+
+export const Nav = styled.div`
+  height: 100%;
+`;
+
+export const NavIcon = styled.div`
+  padding 10px;
+  height: 20px;
+  width: 20px;
 `;
 
 export const NavItem = styled.button`

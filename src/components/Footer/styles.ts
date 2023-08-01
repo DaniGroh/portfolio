@@ -11,16 +11,20 @@ export const HelpList = styled.div`
   bottom: 55px;
   right: 55px;
   display: flex;
-  text-align: right;
   align-items: flex-end;
   flex-direction: column;
   z-index: 999;
 
+  a,
   button {
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
     border-radius: 40px;
     border: 1px solid ${theme.colors.grey};
     background-color: ${theme.colors.white};
+    color: ${theme.colors.black};
+    text-decoration: none;
     font-size: 16px;
     margin: 5px;
     width: max-content;

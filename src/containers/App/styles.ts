@@ -11,5 +11,5 @@ export const Content = styled.div`
 
 export const ContentWrapper = styled.div`
   margin-top: 60px;
-  padding: 0px 20px;
+  padding: 0px 100px;
 `;

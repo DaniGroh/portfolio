@@ -1,5 +1,6 @@
 import { MdClose } from 'react-icons/md';
 import { useState } from 'react';
+import { IoMdMail, IoLogoLinkedin, IoLogoWhatsapp } from 'react-icons/io';
 import * as S from './styles';
 
 export function Footer() {
@@ -18,9 +19,26 @@ export function Footer() {
       )}
       {help && (
         <S.HelpList>
-          <button type="button">LinkedIn</button>
-          <button type="button">GitHub</button>
-          <button type="button">Whatsapp</button>
+          <a href="mailto:daniagroh@gmail.com" target="_blank" rel="noreferrer">
+            E-mail&ensp;
+            <IoMdMail size={20} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/daniagroh/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn&ensp;
+            <IoLogoLinkedin size={20} />
+          </a>
+          <a
+            href="https://wa.me/qr/CFPWWO6FLH5OG1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Whatsapp&ensp;
+            <IoLogoWhatsapp size={20} />
+          </a>
           <button
             type="button"
             onClick={() => {
@@ -34,7 +52,7 @@ export function Footer() {
       <S.Footer>
         Daniel Arruda Groh
         <br />
-        AWS | Javascript | Typescript | React
+        AWS | Javascript | TypeScript | React
         <br />
         Taubaté, São Paulo - Brazil
       </S.Footer>

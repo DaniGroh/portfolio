@@ -10,6 +10,16 @@ export function Header({ changePage }: IHeaderProps) {
       link: '/',
     },
     {
+      id: 'Knowledge',
+      title: 'Knowledge',
+      link: '/knowledge',
+    },
+    {
+      id: 'projects',
+      title: 'Projects',
+      link: '/projects',
+    },
+    {
       id: 'projects',
       title: 'Projects',
       link: '/projects',
@@ -29,15 +39,17 @@ export function Header({ changePage }: IHeaderProps) {
   return (
     <S.Container>
       <S.Header>
-        {pages.map((page) => (
-          <S.NavItem
-            type="button"
-            key={page.link}
-            onClick={() => handleSelectPage(page.link)}
-          >
-            {page.title}
-          </S.NavItem>
-        ))}
+        <S.Nav>
+          {pages.map((page) => (
+            <S.NavItem
+              type="button"
+              key={page.link}
+              onClick={() => handleSelectPage(page.link)}
+            >
+              {page.title}
+            </S.NavItem>
+          ))}
+        </S.Nav>
       </S.Header>
     </S.Container>
   );

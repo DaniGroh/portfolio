@@ -1,13 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-  }  
+  }
 
   html,
   body {
@@ -18,10 +16,7 @@ const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
     border: none;
-  }
-
-  input {
-    color:${theme.colors.black}
+    background-color: transparent;
   }
 `;
 export default GlobalStyle;
