@@ -6,59 +6,35 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const HelpList = styled.div`
-  position: fixed;
-  bottom: 55px;
-  right: 55px;
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  z-index: 999;
-
-  a,
-  button {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    border-radius: 40px;
-    border: 1px solid ${theme.colors.grey};
-    background-color: ${theme.colors.white};
-    color: ${theme.colors.black};
-    text-decoration: none;
-    font-size: 16px;
-    margin: 5px;
-    width: max-content;
-    text-align: end;
-    z-index: 10;
-
-    :hover {
-      background-color: ${theme.colors.grey};
-    }
-  }
-`;
-
-export const HelpIcon = styled.button`
-  position: fixed;
-  bottom: 55px;
-  right: 55px;
-  padding: 20px;
-  border-radius: 40px;
-  background-color: ${theme.colors.white};
-  font-size: 16px;
-  border: 1px solid ${theme.colors.grey};
-  z-index: 999;
-
-  :hover {
-    background-color: ${theme.colors.grey};
-  }
-`;
 export const Footer = styled.div`
+  display: flex;
+  justify-content: space-between;
   position: relative;
   height: 60px;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 100px;
   margin-top: 32px;
   text-align: center;
   background-color: ${theme.colors.white};
   color: #8c8c8c;
   border-top: 1px solid ${theme.colors.grey};
+`;
+
+export const Author = styled.div``;
+
+export const Copyright = styled.div``;
+
+export const SocialMedia = styled.div`
+  display: flex;
+
+  a {
+    margin-right: 5px;
+    margin-top: -2px;
+    color: ${theme.colors.darkGrey};
+  }
+
+  svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;

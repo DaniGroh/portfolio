@@ -1,5 +1,4 @@
-import { IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from 'react-icons/io';
-import profilePic from '../../assets/perfilPic.jpg';
+import developer from '../../assets/developer.png';
 import * as S from './styles';
 
 function AboutMe() {
@@ -8,37 +7,14 @@ function AboutMe() {
       <S.Intro>
         <S.Greeting>
           <span>
-            Hello,
+            Hello, 👋🏻
             <br />
             I&apos;m Daniel Arruda Groh
             <br />A software engineer
           </span>
-          <S.SocialMedia>
-            <a
-              href="https://github.com/DaniGroh"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IoLogoGithub size={25} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/daniagroh/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IoLogoLinkedin size={25} />
-            </a>
-            <a
-              href="https://wa.me/qr/CFPWWO6FLH5OG1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IoLogoWhatsapp size={25} />
-            </a>
-          </S.SocialMedia>
         </S.Greeting>
         <S.ProfileImage>
-          <img src={profilePic} alt="ProfilePhoto" />
+          <img src={developer} alt="ProfilePhoto" />
         </S.ProfileImage>
       </S.Intro>
       <S.Info>
