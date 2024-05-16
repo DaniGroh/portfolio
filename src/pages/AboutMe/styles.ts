@@ -13,26 +13,10 @@ export const Intro = styled.div`
 
 export const Greeting = styled.div`
   display: block;
-  jutify-content: center;
+  justify-content: center;
   align-items: center;
   span {
     font-size: 32px;
-  }
-`;
-
-export const SocialMedia = styled.div`
-  display: flex;
-  margin-top: 20px;
-
-  a {
-    margin-right: 5px;
-    color: ${theme.colors.black};
-  }
-
-  svg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 `;
 

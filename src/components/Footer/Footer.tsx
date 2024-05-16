@@ -1,60 +1,33 @@
-import { MdClose } from 'react-icons/md';
-import { useState } from 'react';
-import { IoMdMail, IoLogoLinkedin, IoLogoWhatsapp } from 'react-icons/io';
+import { IoMdMail, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
 import * as S from './styles';
 
 export function Footer() {
-  const [help, setHelp] = useState(false);
-
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <S.Container>
-      {!help && (
-        <S.HelpIcon
-          onClick={() => {
-            setHelp(true);
-          }}
-        >
-          Contact Me
-        </S.HelpIcon>
-      )}
-      {help && (
-        <S.HelpList>
+      <S.Footer>
+        <S.Author>Developed and design by Daniel Groh</S.Author>
+        <S.Copyright>Copyright © {year}</S.Copyright>
+        <S.SocialMedia>
           <a href="mailto:daniagroh@gmail.com" target="_blank" rel="noreferrer">
-            E-mail&ensp;
-            <IoMdMail size={20} />
+            <IoMdMail size={25} />
           </a>
           <a
             href="https://www.linkedin.com/in/daniagroh/"
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn&ensp;
-            <IoLogoLinkedin size={20} />
+            <IoLogoLinkedin size={25} />
           </a>
           <a
-            href="https://wa.me/qr/CFPWWO6FLH5OG1"
+            href="https://github.com/DaniGroh"
             target="_blank"
             rel="noreferrer"
           >
-            Whatsapp&ensp;
-            <IoLogoWhatsapp size={20} />
+            <IoLogoGithub size={25} />
           </a>
-          <button
-            type="button"
-            onClick={() => {
-              setHelp(false);
-            }}
-          >
-            <MdClose />
-          </button>
-        </S.HelpList>
-      )}
-      <S.Footer>
-        Daniel Arruda Groh
-        <br />
-        AWS | Javascript | TypeScript | React
-        <br />
-        Taubaté, São Paulo - Brazil
+        </S.SocialMedia>
       </S.Footer>
     </S.Container>
   );
