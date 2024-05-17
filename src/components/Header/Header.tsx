@@ -42,21 +42,17 @@ export function Header({ changePage }: IHeaderProps) {
   );
 
   return (
-    <S.Container>
-      <S.Header>
-        <S.Nav>
-          {pages.map((page) => (
-            <S.NavItem
-              type="button"
-              key={page.link}
-              onClick={() => handleSelectPage(page.link)}
-            >
-              {page.icon}
-              {page.title}
-            </S.NavItem>
-          ))}
-        </S.Nav>
-      </S.Header>
-    </S.Container>
+    <S.Header>
+      {pages.map((page) => (
+        <S.NavItem
+          type="button"
+          key={page.link}
+          onClick={() => handleSelectPage(page.link)}
+        >
+          {page.icon}
+          {page.title}
+        </S.NavItem>
+      ))}
+    </S.Header>
   );
 }

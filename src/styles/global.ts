@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(222, 130, 235, 0.911);
+    background: rgba(148, 148, 148, 0.911);
     border-radius: 12px;
   }
 `;

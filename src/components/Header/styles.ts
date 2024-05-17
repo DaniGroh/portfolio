@@ -1,16 +1,11 @@
 import styled from 'styled-components';
 import { theme } from '../../styles';
 
-export const Container = styled.div`
-  position: absolute;
-  width: 100%;
-  z-index: 5;
-`;
-
 export const Header = styled.div`
   position: fixed;
   width: 100%;
   height: 60px;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,14 +13,7 @@ export const Header = styled.div`
   flex-wrap: no-wrap;
   margin: auto;
 
-  background-color: ${theme.colors.white};
-  button {
-    background-color: ${theme.colors.white};
-  }
-`;
-
-export const Nav = styled.div`
-  height: 100%;
+  background-color: rgba(218, 218, 218, 0.7);
 `;
 
 export const NavItem = styled.button`

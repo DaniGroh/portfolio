@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../styles';
 
-export const Container = styled.div`
-  position: absolute;
-  width: 100%;
-`;
-
 export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -18,10 +13,6 @@ export const Footer = styled.div`
   color: #8c8c8c;
   border-top: 1px solid ${theme.colors.grey};
 `;
-
-export const Author = styled.div``;
-
-export const Copyright = styled.div``;
 
 export const SocialMedia = styled.div`
   display: flex;
