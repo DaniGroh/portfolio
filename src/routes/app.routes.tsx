@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { AppContainer } from '../containers';
-import { AboutMe } from '../pages/AboutMe';
-import { Knowledge } from '../pages/Knowledge';
+import { Home } from '../pages/Home';
+import { About } from '../pages/About';
 import { Projects } from '../pages/Projects';
 import { Resume } from '../pages/Resume';
 
@@ -9,8 +9,8 @@ function AppRoutes() {
   return (
     <AppContainer>
       <Routes>
-        <Route path="/" element={<AboutMe />} />
-        <Route path="/about" element={<Knowledge />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
       </Routes>

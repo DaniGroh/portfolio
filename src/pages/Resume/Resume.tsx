@@ -1,37 +1,59 @@
-import profilePic from '../../assets/perfilPic.jpg';
+import { useState } from 'react';
 import * as S from './styles';
 
 function Resume() {
-  const onEnglishResumeDownload = () => {
-    const pdfUrl = 'resume.pdf';
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-  const onPortugueseResumeDownload = () => {
-    const pdfUrl = 'curriculo.pdf';
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'curriculo.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const [portugueseResume, setPortugueseResume] = useState(false);
 
   return (
     <S.Container>
-      <S.DownloadResume onClick={onEnglishResumeDownload}>
-        Download Resume - English
+      <S.DownloadResume>
+        <button type="button" onClick={() => setPortugueseResume(false)}>
+          English
+        </button>
+        <button type="button" onClick={() => setPortugueseResume(true)}>
+          Portuguese
+        </button>
       </S.DownloadResume>
-      <S.DownloadResume onClick={onPortugueseResumeDownload}>
-        Download Resume - Portuguese
-      </S.DownloadResume>
-      <S.ProfileImage>
-        <img src={profilePic} alt="ProfilePhoto" />
-      </S.ProfileImage>
+      <S.Resume>
+        {!portugueseResume && (
+          <object
+            data="resume.pdf"
+            type="application/pdf"
+            width="100%"
+            height="100%"
+          >
+            <p>
+              Unable to load Resume, contact me at{' '}
+              <a
+                href="https://www.linkedin.com/in/daniagroh/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Linkedin
+              </a>
+            </p>
+          </object>
+        )}
+        {portugueseResume && (
+          <object
+            data="curriculo.pdf"
+            type="application/pdf"
+            width="100%"
+            height="100%"
+          >
+            <p>
+              Unable to load Resume, contact me at{' '}
+              <a
+                href="https://www.linkedin.com/in/daniagroh/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Linkedin
+              </a>
+            </p>
+          </object>
+        )}
+      </S.Resume>
     </S.Container>
   );
 }

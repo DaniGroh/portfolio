@@ -2,7 +2,7 @@ import developer from '../../assets/developer.png';
 import boy from '../../assets/boy.png';
 import * as S from './styles';
 
-function AboutMe() {
+function Home() {
   return (
     <S.Container>
       <S.Intro>
@@ -40,4 +40,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default Home;

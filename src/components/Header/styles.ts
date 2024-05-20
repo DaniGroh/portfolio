@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../styles';
 
 export const Header = styled.div`
   position: fixed;
@@ -23,7 +22,7 @@ export const NavItem = styled.button`
   height: 100%;
 
   :hover {
-    background-color: ${theme.colors.grey};
+    background-color: rgba(148, 148, 148, 0.7);
   }
 
   svg {

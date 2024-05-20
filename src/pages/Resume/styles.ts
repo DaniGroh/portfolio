@@ -1,17 +1,26 @@
 import styled from 'styled-components';
+import { theme } from '../../styles';
 
 export const Container = styled.div``;
 
-export const DownloadResume = styled.button``;
-
-export const ProfileImage = styled.div`
+export const DownloadResume = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  padding: 50px;
+  button {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    border: 1px solid ${theme.colors.darkGrey};
+    border-radius: 5px;
+    transition: transform 0.3s;
 
-  img {
-    width: 150px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 150px;
+    :hover {
+      transform: scale(1.1);
+    }
   }
+`;
+
+export const Resume = styled.div`
+  height: 100vh;
 `;
