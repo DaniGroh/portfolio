@@ -30,4 +30,9 @@ export const NavItem = styled.button`
     margin-right: 5px;
     margin-top: -2px;
   }
+
+  svg {
+    margin-right: 5px;
+    margin-top: -2px;
+  }
 `;
