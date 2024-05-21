@@ -6,7 +6,7 @@ export const Container = styled.div``;
 export const Description = styled.div`
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   justify-content: space-between;
   font-size: 35px;
 
@@ -17,10 +17,14 @@ export const Description = styled.div`
 `;
 
 export const DescriptionTitle = styled.div`
+  font-size: 25px;
+  line-height: 1.3;
+  text-align: justify;
   span {
     display: flex;
     justify-content: center;
     font-weight: 700;
+    font-size: 35px;
   }
 `;
 
@@ -35,6 +39,8 @@ export const SkillTitle = styled.div`
 
 export const Icon = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const IconBox = styled.div`
@@ -43,7 +49,7 @@ export const IconBox = styled.div`
   justify-content: center;
   align-items: center;
   height: 190px;
-  width: 25%;
+  width: 22%;
   margin: 20px 10px;
   border: 1px solid ${theme.colors.darkGrey};
   border-radius: 5px;
@@ -52,6 +58,7 @@ export const IconBox = styled.div`
   svg {
     display: block;
     align-items: center;
+    padding-bottom: 5px;
   }
 
   :hover {

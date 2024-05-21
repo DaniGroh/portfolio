@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100vh;
     height: 100vh;
+    line-height: 1.3;
     background-image: linear-gradient(to left, ${theme.colors.white}, ${theme.colors.lightGrey});
 }
 

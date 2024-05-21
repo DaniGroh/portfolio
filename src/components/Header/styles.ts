@@ -20,6 +20,7 @@ export const NavItem = styled.button`
   display: inline-flex;
   align-items: center;
   height: 100%;
+  font-size: 20px;
 
   :hover {
     background-color: rgba(148, 148, 148, 0.7);

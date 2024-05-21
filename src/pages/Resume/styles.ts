@@ -8,12 +8,12 @@ export const DownloadResume = styled.div`
   justify-content: center;
   padding: 50px;
   button {
-    margin-bottom: 20px;
-    margin-right: 20px;
+    margin: 0px 20px;
     padding: 5px;
     border: 1px solid ${theme.colors.darkGrey};
     border-radius: 5px;
     transition: transform 0.3s;
+    font-size: 20px;
 
     :hover {
       transform: scale(1.1);

@@ -6,7 +6,7 @@ export const Container = styled.div``;
 export const Intro = styled.div`
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   justify-content: space-between;
   font-size: 45px;
   img {
@@ -16,20 +16,30 @@ export const Intro = styled.div`
   }
 `;
 
+export const Greeting = styled.div`
+  span {
+    color: ${theme.colors.purple};
+  }
+`;
+
+export const Capabilities = styled.div`
+  padding-top: 30px;
+  color: ${theme.colors.purple};
+`;
+
 export const Info = styled.div`
   display: flex;
   align-items: center;
-  height: 80vh;
-  text-align: center;
-  font-size: 30px;
-
+  height: 70vh;
+  font-size: 35px;
+  text-align: justify;
   a {
     color: ${theme.colors.black};
     font-weight: 700;
   }
 
   img {
-    padding: 0px 20px;
+    padding-left: 20px;
     display: flex;
     align-items: end;
     width: 30%;

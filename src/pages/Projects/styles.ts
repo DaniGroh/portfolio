@@ -32,6 +32,7 @@ export const ProjectBox = styled.div`
   border-radius: 5px;
   transition: transform 0.3s;
   overflow: auto;
+  font-size: 20px;
 
   :hover {
     transform: scale(1.07);

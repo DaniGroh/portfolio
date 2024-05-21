@@ -1,3 +1,4 @@
+import Typewriter from 'typewriter-effect';
 import developer from '../../assets/developer.png';
 import boy from '../../assets/boy.png';
 import * as S from './styles';
@@ -6,32 +7,36 @@ function Home() {
   return (
     <S.Container>
       <S.Intro>
-        <span>
+        <S.Greeting>
           Hello, 👋🏻
           <br />
-          I&apos;m Daniel Arruda Groh
+          I&apos;m <span>DANIEL GROH</span>
           <br />
-          Software engineer
-        </span>
+          <Typewriter
+            options={{
+              strings: [
+                'Software Developer',
+                'Back-end Developer',
+                'Quality Assurance',
+                'Front-end Developer',
+              ],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 50,
+            }}
+          />
+        </S.Greeting>
         <img src={developer} alt="Developer" />
       </S.Intro>
       <S.Info>
         <span>
-          I have a degree in computer engineering and during my degree I have
-          worked with different tools. I&apos;m currently a front-end developer
-          at{' '}
-          <a href="https://www.receba.app" target="_blank" rel="noreferrer">
-            Receba
-          </a>
-          , but have already worked as back-end developer at{' '}
-          <a href="https://www.iclubs.tech" target="_blank" rel="noreferrer">
-            Iclubs
-          </a>{' '}
-          and as software tester at{' '}
-          <a href="https://www.zappts.com.br" target="_blank" rel="noreferrer">
-            Zappts
-          </a>
-          .
+          I am a software developer with a passion for creating innovative and
+          efficient solutions.
+          <br /> At 2014 I started mt journey through the tec world and felt in
+          love at glance. I have worked on a variety of projects, from building
+          webpages to complex backend systems.
+          <br />I love exploring new technologies and methodologies to enhance
+          my skills and deliver high-quality products.
         </span>
 
         <img src={boy} alt="Boy" />
