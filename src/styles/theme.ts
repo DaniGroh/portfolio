@@ -6,7 +6,7 @@ export const theme = {
     grey: '#dadada',
     darkGrey: '#949494',
     yellow: '#ffda78',
-    purple: '#b4a5ff',
+    purple: '#7B68EE',
     green: '#f4fcf8',
     red: '#d0312d',
   },

@@ -1,61 +1,28 @@
-import { MdClose } from 'react-icons/md';
-import { useState } from 'react';
-import { IoMdMail, IoLogoLinkedin, IoLogoWhatsapp } from 'react-icons/io';
+import { IoMdMail, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
 import * as S from './styles';
 
 export function Footer() {
-  const [help, setHelp] = useState(false);
-
+  const date = new Date();
+  const year = date.getFullYear();
   return (
-    <S.Container>
-      {!help && (
-        <S.HelpIcon
-          onClick={() => {
-            setHelp(true);
-          }}
+    <S.Footer>
+      <span>Developed and design by Daniel Groh</span>
+      <span>Copyright © {year}</span>
+      <S.SocialMedia>
+        <a href="mailto:daniagroh@gmail.com" target="_blank" rel="noreferrer">
+          <IoMdMail size={25} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/daniagroh/"
+          target="_blank"
+          rel="noreferrer"
         >
-          Contact Me
-        </S.HelpIcon>
-      )}
-      {help && (
-        <S.HelpList>
-          <a href="mailto:daniagroh@gmail.com" target="_blank" rel="noreferrer">
-            E-mail&ensp;
-            <IoMdMail size={20} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/daniagroh/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn&ensp;
-            <IoLogoLinkedin size={20} />
-          </a>
-          <a
-            href="https://wa.me/qr/CFPWWO6FLH5OG1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Whatsapp&ensp;
-            <IoLogoWhatsapp size={20} />
-          </a>
-          <button
-            type="button"
-            onClick={() => {
-              setHelp(false);
-            }}
-          >
-            <MdClose />
-          </button>
-        </S.HelpList>
-      )}
-      <S.Footer>
-        Daniel Arruda Groh
-        <br />
-        AWS | Javascript | TypeScript | React
-        <br />
-        Taubaté, São Paulo - Brazil
-      </S.Footer>
-    </S.Container>
+          <IoLogoLinkedin size={25} />
+        </a>
+        <a href="https://github.com/DaniGroh" target="_blank" rel="noreferrer">
+          <IoLogoGithub size={25} />
+        </a>
+      </S.SocialMedia>
+    </S.Footer>
   );
 }

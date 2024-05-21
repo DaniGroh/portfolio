@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { VscHome, VscAccount, VscCode, VscFile } from 'react-icons/vsc';
 import { IHeaderProps, IPage } from './interfaces';
 import * as S from './styles';
 
@@ -8,21 +9,25 @@ export function Header({ changePage }: IHeaderProps) {
       id: 'home',
       title: 'Home',
       link: '/',
+      icon: <VscHome />,
     },
     {
-      id: 'Knowledge',
-      title: 'Knowledge',
-      link: '/knowledge',
-    },
-    {
-      id: 'projects',
-      title: 'Projects',
-      link: '/projects',
+      id: 'about',
+      title: 'About',
+      link: '/about',
+      icon: <VscAccount />,
     },
     {
       id: 'projects',
       title: 'Projects',
       link: '/projects',
+      icon: <VscCode />,
+    },
+    {
+      id: 'resume',
+      title: 'Resume',
+      link: '/resume',
+      icon: <VscFile />,
     },
   ];
 
@@ -37,20 +42,17 @@ export function Header({ changePage }: IHeaderProps) {
   );
 
   return (
-    <S.Container>
-      <S.Header>
-        <S.Nav>
-          {pages.map((page) => (
-            <S.NavItem
-              type="button"
-              key={page.link}
-              onClick={() => handleSelectPage(page.link)}
-            >
-              {page.title}
-            </S.NavItem>
-          ))}
-        </S.Nav>
-      </S.Header>
-    </S.Container>
+    <S.Header>
+      {pages.map((page) => (
+        <S.NavItem
+          type="button"
+          key={page.link}
+          onClick={() => handleSelectPage(page.link)}
+        >
+          {page.icon}
+          {page.title}
+        </S.NavItem>
+      ))}
+    </S.Header>
   );
 }
