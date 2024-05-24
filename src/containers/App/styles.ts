@@ -12,4 +12,7 @@ export const Content = styled.div`
 export const ContentWrapper = styled.div`
   margin-top: 60px;
   padding: 0px 100px;
+  @media (max-width: 767px) {
+    padding: 0px 20px;
+  }
 `;

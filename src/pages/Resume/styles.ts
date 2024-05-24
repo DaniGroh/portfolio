@@ -19,6 +19,10 @@ export const DownloadResume = styled.div`
       transform: scale(1.1);
     }
   }
+
+  p {
+    text-align: center;
+  }
 `;
 
 export const Resume = styled.div`

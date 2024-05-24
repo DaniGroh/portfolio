@@ -11,6 +11,7 @@ import {
   SiPwa,
   SiGnubash,
   SiPython,
+  SiVite,
 } from 'react-icons/si';
 import perfilPic from '../../assets/perfilPic.png';
 import * as S from './styles';
@@ -37,6 +38,11 @@ function About() {
       id: 'react',
       name: 'React.js',
       icon: <SiReact size={80} />,
+    },
+    {
+      id: 'vite',
+      name: 'Vite',
+      icon: <SiVite size={80} />,
     },
     {
       id: 'pwa',

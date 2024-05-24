@@ -6,12 +6,13 @@ export const Container = styled.div``;
 export const Title = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   font-size: 30px;
   padding: 50px 0px;
 
   span {
     font-weight: 700;
+    align-items: center;
   }
 `;
 
@@ -24,7 +25,7 @@ export const Projects = styled.div`
 export const ProjectBox = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
   width: 30%;
   margin: 20px 10px;
   padding: 20px;
@@ -34,8 +35,23 @@ export const ProjectBox = styled.div`
   overflow: auto;
   font-size: 20px;
 
+  span {
+    font-weight: 700;
+  }
+
+  img {
+    display: block;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+
   :hover {
     transform: scale(1.07);
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    text-align: center;
   }
 `;
 

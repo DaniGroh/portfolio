@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import resume from '../../assets/resume.pdf';
-// import curriculo from '../../assets/curriculo.pdf';
+import curriculo from '../../assets/curriculo.pdf';
 import * as S from './styles';
 
 function Resume() {
@@ -18,25 +18,31 @@ function Resume() {
       </S.DownloadResume>
       <S.Resume>
         {!portugueseResume && (
-          <iframe src={resume} title="Resume" width="100%" height="100%">
-            Presss me: <a href={resume}>Download PDF</a>
-          </iframe>
-        )}
-        {portugueseResume && (
           <object
-            data="curriculo.pdf"
+            data={resume}
             type="application/pdf"
             width="100%"
             height="100%"
           >
             <p>
-              Unable to load Resume, contact me at{' '}
-              <a
-                href="https://www.linkedin.com/in/daniagroh/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Linkedin
+              Unable to load English Resume,{' '}
+              <a href={resume} target="_blank" rel="noreferrer">
+                click here to download it.
+              </a>
+            </p>
+          </object>
+        )}
+        {portugueseResume && (
+          <object
+            data={curriculo}
+            type="application/pdf"
+            width="100%"
+            height="100%"
+          >
+            <p>
+              Unable to load Portuguese Resume,{' '}
+              <a href={curriculo} target="_blank" rel="noreferrer">
+                click here to download it.
               </a>
             </p>
           </object>

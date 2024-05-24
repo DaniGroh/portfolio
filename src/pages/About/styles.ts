@@ -13,6 +13,16 @@ export const Description = styled.div`
   img {
     width: 30%;
     border-radius: 100%;
+    padding-left: 10px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    height: auto;
+
+    img {
+      width: 70%;
+    }
   }
 `;
 
@@ -20,11 +30,16 @@ export const DescriptionTitle = styled.div`
   font-size: 25px;
   line-height: 1.3;
   text-align: justify;
+
   span {
     display: flex;
     justify-content: center;
     font-weight: 700;
     font-size: 35px;
+  }
+
+  @media (max-width: 767px) {
+    text-align: center;
   }
 `;
 
@@ -32,8 +47,13 @@ export const SkillTitle = styled.div`
   display: flex;
   justify-content: center;
   font-size: 30px;
+
   span {
     font-weight: 700;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 15px;
   }
 `;
 
@@ -63,5 +83,9 @@ export const IconBox = styled.div`
 
   :hover {
     transform: scale(1.07);
+  }
+
+  @media (max-width: 767px) {
+    width: 40%;
   }
 `;

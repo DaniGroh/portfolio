@@ -12,6 +12,13 @@ export const Footer = styled.div`
   background-color: ${theme.colors.white};
   color: #8c8c8c;
   border-top: 1px solid ${theme.colors.grey};
+
+  @media (max-width: 767px) {
+    height: auto;
+    display: grid;
+    padding: 20px 20px;
+    justify-content: center;
+  }
 `;
 
 export const SocialMedia = styled.div`
@@ -26,6 +33,11 @@ export const SocialMedia = styled.div`
   svg {
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 5px;
     justify-content: center;
   }
 `;
