@@ -12,21 +12,23 @@ function Home() {
           <br />
           I&apos;m <span>DANIEL GROH</span>
           <br />
-          <Typewriter
-            options={{
-              strings: [
-                'Software Developer',
-                'Back-end Developer',
-                'Quality Assurance',
-                'Front-end Developer',
-              ],
-              autoStart: true,
-              loop: true,
-              deleteSpeed: 50,
-            }}
-          />
+          <S.Type>
+            <Typewriter
+              options={{
+                strings: [
+                  'Software Developer',
+                  'Back-end Developer',
+                  'Quality Assurance',
+                  'Front-end Developer',
+                ],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+              }}
+            />
+          </S.Type>
         </S.Greeting>
-        <img src={developer} alt="Developer" />
+        <img src={developer} alt="" />
       </S.Intro>
       <S.Info>
         <span>

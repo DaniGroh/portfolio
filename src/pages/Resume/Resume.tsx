@@ -18,9 +18,19 @@ function Resume() {
       </S.DownloadResume>
       <S.Resume>
         {!portugueseResume && (
-          <iframe src={resume} title="Resume" width="100%" height="100%">
-            Presss me: <a href={resume}>Download PDF</a>
-          </iframe>
+          <object
+            data={resume}
+            type="application/pdf"
+            width="100%"
+            height="100%"
+          >
+            <p>
+              Unable to load English Resume,{' '}
+              <a href={resume} target="_blank" rel="noreferrer">
+                click here to download it.
+              </a>
+            </p>
+          </object>
         )}
         {portugueseResume && (
           <object
@@ -30,13 +40,9 @@ function Resume() {
             height="100%"
           >
             <p>
-              Unable to load Resume, contact me at{' '}
-              <a
-                href="https://www.linkedin.com/in/daniagroh/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Linkedin
+              Unable to load Portuguese Resume,{' '}
+              <a href={curriculo} target="_blank" rel="noreferrer">
+                click here to download it.
               </a>
             </p>
           </object>
