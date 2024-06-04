@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../styles';
 
 export const Header = styled.div`
   position: fixed;
@@ -10,12 +11,12 @@ export const Header = styled.div`
   padding: 0 40px;
   flex-wrap: no-wrap;
 
-  background-color: rgba(218, 218, 218, 0.7);
+  color: ${theme.colors.gray300};
+  background-color: rgba(32, 32, 36, 0.9);
 
   @media (max-width: 767px) {
     display: block;
     height: auto;
-    background-color: rgba(218, 218, 218);
   }
 `;
 

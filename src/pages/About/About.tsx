@@ -13,6 +13,7 @@ import {
   SiPython,
   SiVite,
 } from 'react-icons/si';
+import { useEffect } from 'react';
 import perfilPic from '../../assets/perfilPic.png';
 import * as S from './styles';
 import { IIcon } from './interfaces';
@@ -99,6 +100,12 @@ function About() {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <S.Container>
       <S.Description>

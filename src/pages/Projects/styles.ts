@@ -37,6 +37,7 @@ export const ProjectBox = styled.div`
 
   span {
     font-weight: 700;
+    padding-top: 5px;
   }
 
   img {
@@ -68,6 +69,7 @@ export const Github = styled.a`
   transition: transform 0.3s;
   color: ${theme.colors.black};
   text-decoration: none;
+  color: ${theme.colors.gray300};
 
   :hover {
     transform: scale(1.07);

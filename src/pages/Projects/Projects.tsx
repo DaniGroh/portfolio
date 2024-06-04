@@ -1,4 +1,5 @@
 import { IoLogoGithub } from 'react-icons/io';
+import { useEffect } from 'react';
 import { IProject } from './interfaces';
 import Pomodoro from '../../assets/pomodoro.png';
 import SocialNetwork from '../../assets/social_network.png';
@@ -41,6 +42,13 @@ function Projects() {
       link: 'https://github.com/danigroh/portfolio',
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   return (
     <S.Container>

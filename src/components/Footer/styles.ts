@@ -9,9 +9,7 @@ export const Footer = styled.div`
   padding: 20px 100px;
   margin-top: 32px;
   text-align: center;
-  background-color: ${theme.colors.white};
-  color: #8c8c8c;
-  border-top: 1px solid ${theme.colors.grey};
+  background-color: ${theme.colors.gray800};
 
   @media (max-width: 767px) {
     height: auto;

@@ -1,9 +1,17 @@
 import Typewriter from 'typewriter-effect';
+import { useEffect } from 'react';
 import developer from '../../assets/developer.png';
 import boy from '../../assets/boy.png';
 import * as S from './styles';
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
   return (
     <S.Container>
       <S.Intro>
@@ -17,9 +25,8 @@ function Home() {
               options={{
                 strings: [
                   'Software Developer',
-                  'Back-end Developer',
                   'Quality Assurance',
-                  'Front-end Developer',
+                  'Full Stack Developer',
                 ],
                 autoStart: true,
                 loop: true,

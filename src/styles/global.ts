@@ -8,24 +8,29 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body {
+  -webkit-font-smoothing: antialiased;
+}
+
   html,
   body {
     min-height: 100vh;
     height: 100vh;
     line-height: 1.3;
     background-image: linear-gradient(to left, ${theme.colors.white}, ${theme.colors.lightGrey});
+    background: ${theme.colors.gray900};
+    color: ${theme.colors.gray300};
 }
 
   button {
     cursor: pointer;
     border: none;
     background-color: transparent;
+    color: ${theme.colors.gray300};
   }
 
   body, input, textarea, button {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
+    font: 400 1rem Roboto, sans-serif;
   }
 
   /* --------- */
@@ -37,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: ${theme.colors.lightGrey};
+    background: ${theme.colors.gray700};
   }
 
   /* Handle */

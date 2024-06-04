@@ -1,10 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import resume from '../../assets/resume.pdf';
 import curriculo from '../../assets/curriculo.pdf';
 import * as S from './styles';
 
 function Resume() {
   const [portugueseResume, setPortugueseResume] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   return (
     <S.Container>
