@@ -57,4 +57,5 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 12px;
   }
 `;
-export default GlobalStyle;
+
+export default GlobalStyle as React.ComponentType;
