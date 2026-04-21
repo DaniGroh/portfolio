@@ -1,4 +1,5 @@
 import { useCallback, useState, useMemo } from 'react';
+import { useLocation } from 'react-router-dom';
 import { VscHome, VscAccount, VscCode, VscFile } from 'react-icons/vsc';
 import { IoIosMenu, IoMdClose } from 'react-icons/io';
 import logo from '../../assets/logo.png';
@@ -7,6 +8,7 @@ import * as S from './styles';
 
 export function Header({ changePage }: IHeaderProps) {
   const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
   // eslint-disable-next-line no-restricted-globals
   const mobile = screen.width < 767;
   const showIcons = useMemo(
@@ -15,30 +17,10 @@ export function Header({ changePage }: IHeaderProps) {
   );
 
   const pages: IPage[] = [
-    {
-      id: 'home',
-      title: 'Home',
-      link: '/',
-      icon: <VscHome />,
-    },
-    {
-      id: 'about',
-      title: 'About',
-      link: '/about',
-      icon: <VscAccount />,
-    },
-    {
-      id: 'projects',
-      title: 'Projects',
-      link: '/projects',
-      icon: <VscCode />,
-    },
-    {
-      id: 'resume',
-      title: 'Resume',
-      link: '/resume',
-      icon: <VscFile />,
-    },
+    { id: 'home', title: 'Home', link: '/', icon: <VscHome /> },
+    { id: 'about', title: 'About', link: '/about', icon: <VscAccount /> },
+    { id: 'projects', title: 'Projects', link: '/projects', icon: <VscCode /> },
+    { id: 'resume', title: 'Resume', link: '/resume', icon: <VscFile /> },
   ];
 
   const handleSelectPage = useCallback(
@@ -59,7 +41,11 @@ export function Header({ changePage }: IHeaderProps) {
   return (
     <S.Header>
       <S.Top>
-        <S.Logo src={logo} onClick={() => handleLogoClick()} alt="" />
+        <S.Logo
+          src={logo}
+          onClick={() => handleLogoClick()}
+          alt="Daniel Groh"
+        />
         {mobile && !expanded && (
           <S.Expand onClick={() => setExpanded(true)}>
             <IoIosMenu />
@@ -77,6 +63,7 @@ export function Header({ changePage }: IHeaderProps) {
             <S.NavItem
               type="button"
               key={page.link}
+              $active={location.pathname === page.link}
               onClick={() => handleSelectPage(page.link)}
             >
               {page.icon}

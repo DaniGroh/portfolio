@@ -1,30 +1,37 @@
 import styled from 'styled-components';
 import { theme } from '../../styles';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  padding-bottom: 60px;
+`;
 
 export const DownloadResume = styled.div`
   display: flex;
   justify-content: center;
-  padding: 50px;
+  gap: 14px;
+  padding: 40px 0;
+
   button {
-    margin: 0px 20px;
-    padding: 5px;
-    border: 1px solid ${theme.colors.darkGrey};
-    border-radius: 5px;
-    transition: transform 0.3s;
-    font-size: 20px;
+    padding: 10px 28px;
+    border: 1.5px solid ${theme.colors.gray600};
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: ${theme.colors.gray400};
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
 
-    :hover {
-      transform: scale(1.1);
+    &:hover,
+    &.active {
+      color: ${theme.colors.accent};
+      border-color: ${theme.colors.accent};
+      background-color: rgba(129, 140, 248, 0.08);
     }
-  }
-
-  p {
-    text-align: center;
   }
 `;
 
 export const Resume = styled.div`
   height: 100vh;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid ${theme.colors.gray600};
 `;

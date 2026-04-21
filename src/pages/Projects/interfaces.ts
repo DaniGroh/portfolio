@@ -4,4 +4,5 @@ export type IProject = {
   description: string;
   image: string;
   link: string;
+  tags?: string[];
 };

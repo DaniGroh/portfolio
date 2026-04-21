@@ -11,61 +11,72 @@ function Projects() {
   const projects: IProject[] = [
     {
       id: '1',
-      title: 'Pomodoro',
+      title: 'Pomodoro Timer',
       description:
-        'This is a website to help you to focus using Pomodoro techinic, where you set the amount of time you should focus on your activities, and an alarm will ring in the end of the focusing time you set.',
+        'Focus timer built with the Pomodoro technique. Set your focus intervals, get notified when time is up, and track your productivity sessions.',
       image: Pomodoro,
       link: 'https://github.com/danigroh/pomodoro',
+      tags: ['React', 'TypeScript', 'CSS'],
     },
     {
       id: '2',
       title: 'Social Network',
       description:
-        'Project of a social network made with Reactjs and Vite, where is possible to edit your profile, create new posts, see older posts, comment and like them.',
+        'Social media app where users can create and edit profiles, write posts, see a feed, leave comments, and like content.',
       image: SocialNetwork,
       link: 'https://github.com/DaniGroh/social-media',
+      tags: ['React', 'Vite', 'TypeScript'],
     },
     {
       id: '3',
       title: 'Financial Control',
       description:
-        'Project of a website to control financial, where is possible to insert new transactions, search for transaction made in the past and the also show a summary of financial health.',
+        'Personal finance tracker to register transactions, search past entries, and visualize a summary of your financial health.',
       image: FinancialControl,
       link: 'https://github.com/DaniGroh/financial-control',
+      tags: ['React', 'TypeScript', 'Node.js'],
     },
     {
       id: '4',
       title: 'Portfolio',
       description:
-        'My portfolio made with Reactjs, in this website is possible to get to know more informations about my previous work and my skills. Also is possible to download my resume.',
+        'This portfolio site — built with React and styled-components to showcase my projects, skills, and career history.',
       image: Portifolio,
       link: 'https://github.com/danigroh/portfolio',
+      tags: ['React', 'TypeScript', 'styled-components'],
     },
   ];
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
     <S.Container>
-      <S.Title>
-        <span>My recent Works</span>
-        Here are some projects I&apos;ve worked on recently
-      </S.Title>
+      <S.PageHeader>
+        <S.PageLabel>Portfolio</S.PageLabel>
+        <S.Title>My Recent Work</S.Title>
+        <S.TitleDesc>A selection of projects I&apos;ve built</S.TitleDesc>
+      </S.PageHeader>
       <S.Projects>
         {projects.map((project) => (
           <S.ProjectBox key={project.id}>
-            <img src={project.image} alt="project" />
-            <span>{project.title}</span> <br />
-            {project.description}
-            <S.Github href={project.link} target="_blank" rel="noreferrer">
-              <IoLogoGithub size={25} />
-              Github
-            </S.Github>
+            <S.ProjectImage src={project.image} alt={project.title} />
+            <S.ProjectBody>
+              <S.ProjectTitle>{project.title}</S.ProjectTitle>
+              <S.ProjectDescription>{project.description}</S.ProjectDescription>
+              {project.tags && (
+                <S.TagRow>
+                  {project.tags.map((tag) => (
+                    <S.Tag key={tag}>{tag}</S.Tag>
+                  ))}
+                </S.TagRow>
+              )}
+              <S.Github href={project.link} target="_blank" rel="noreferrer">
+                <IoLogoGithub size={16} />
+                View on GitHub
+              </S.Github>
+            </S.ProjectBody>
           </S.ProjectBox>
         ))}
       </S.Projects>

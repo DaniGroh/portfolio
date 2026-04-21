@@ -16,10 +16,18 @@ function Resume() {
   return (
     <S.Container>
       <S.DownloadResume>
-        <button type="button" onClick={() => setPortugueseResume(false)}>
+        <button
+          type="button"
+          className={!portugueseResume ? 'active' : ''}
+          onClick={() => setPortugueseResume(false)}
+        >
           English
         </button>
-        <button type="button" onClick={() => setPortugueseResume(true)}>
+        <button
+          type="button"
+          className={portugueseResume ? 'active' : ''}
+          onClick={() => setPortugueseResume(true)}
+        >
           Portuguese
         </button>
       </S.DownloadResume>

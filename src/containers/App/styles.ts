@@ -10,9 +10,14 @@ export const Content = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  margin-top: 60px;
-  padding: 0px 100px;
+  margin-top: 64px;
+  padding: 0 80px;
+
+  @media (max-width: 1024px) {
+    padding: 0 40px;
+  }
+
   @media (max-width: 767px) {
-    padding: 0px 20px;
+    padding: 0 20px;
   }
 `;

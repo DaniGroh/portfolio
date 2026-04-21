@@ -1,57 +1,68 @@
 <h2 align="center">
-  Portfolio Website<br/>
-  <a href="https://danielgroh.vercel.app/" target="_blank">danielgroh.com</a>
+  Daniel Groh — Portfolio<br/>
+  <a href="https://danielgroh.vercel.app/" target="_blank">danielgroh.vercel.app</a>
 </h2>
 
-<br/>
+<p align="center">
+  My personal portfolio built with React and TypeScript, showcasing my projects, skills, and career history.
+</p>
 
-<center>
+<p align="center">
+  <a href="https://danielgroh.vercel.app/" target="_blank">Live Site</a> &nbsp;·&nbsp;
+  <a href="https://github.com/DaniGroh/portfolio/issues">Report Bug</a> &nbsp;·&nbsp;
+  <a href="https://github.com/DaniGroh/portfolio/issues">Request Feature</a>
+</p>
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/sudoshivesh/portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/sudoshivesh/portfolio?color=red&logo=github&style=for-the-badge)
+---
 
-</center>
+## Tech Stack
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/danigroh/portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/danigroh/portfolio/issues">Request Feature</a>
-</h3>
+- **React 18** with TypeScript
+- **styled-components** — component-scoped styling with a shared theme
+- **React Router v6** — client-side routing
+- **react-icons** — icon library
+- **typewriter-effect** — animated typewriter on the hero section
+- **Vercel** — deployment and analytics
 
-## Built With
+## Pages
 
-My personal portfolio <a href="https://danielgroh.vercel.app/" target="_blank">danielgroh.com</a> which features some of my github projects as well as my resume and technical skills.<br/>
-
-This project was built using these technologies.
-
-- React.js
-- Node.js
-- CSS3
-- VsCode
-- Vercel
+| Route | Description |
+|---|---|
+| `/` | Hero section with typewriter animation and short bio |
+| `/about` | Profile, bio, skills grid, and tools grid |
+| `/projects` | Project cards with descriptions, tech tags, and GitHub links |
+| `/resume` | Embedded PDF viewer with English / Portuguese toggle |
 
 ## Features
 
-**📖 Multi-Page Layout**
-
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
-
-**📱 Fully Responsive**
+- Dark theme with indigo–cyan accent gradient
+- Responsive layout — mobile and desktop
+- Smooth page entrance animations
+- Active navigation state
+- Download CV button linking directly to the resume PDF
 
 ## Getting Started
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+**Prerequisites:** Node.js and Yarn installed globally.
 
-## 🛠 Installation and Setup Instructions
+```bash
+# Clone the repository
+git clone https://github.com/DaniGroh/portfolio.git
+cd portfolio
 
-1. Installation: `npm install`
+# Install dependencies
+yarn install
 
-2. In the project directory, you can run: `npm start`
+# Start the development server
+yarn start
+```
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `yarn start` | Run in development mode |
+| `yarn build` | Build for production |
+| `yarn lint` | Run ESLint |
